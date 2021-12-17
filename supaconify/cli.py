@@ -1,5 +1,5 @@
 import click
-from client import slack
+from supaconify.client import slack
 
 
 @click.command()

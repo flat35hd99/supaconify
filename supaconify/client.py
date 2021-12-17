@@ -1,7 +1,7 @@
 import os
 
 from slack_sdk.webhook import WebhookClient
-from message import builder
+from supaconify.message import builder
 
 
 def slack(url=None, template=None):
@@ -15,4 +15,4 @@ def slack(url=None, template=None):
             )
             exit(code=1)
     message = builder(template=template)
-    WebhookClient(url).send(message)
+    WebhookClient(url).send(text=message)
